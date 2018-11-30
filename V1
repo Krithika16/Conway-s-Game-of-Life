@@ -1,0 +1,85 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+class Board
+{
+	private:
+		int rows;
+		int columns;
+		
+	
+	public:
+		void seed_cells(int s, int c) //sets the initial state of the board
+		{
+			
+		}
+		
+		int get_time() 
+		{
+			return time;
+		}
+		
+		int get_num_cells()
+		{
+			return numCells;
+		}
+		
+		void display()
+		{
+			
+		}
+		
+		void next_state()
+		{
+			
+		}
+};
+
+class Cell
+{
+	private:
+		char normalCell = 'o';
+		char noOrDeadCell = ' ';
+	public:
+	
+};
+
+/*class Cancer //Cancer cells are cells that have a slight resistance to death from overpopulation
+{
+	//Rules - same as those for normal cells except cancer cells die from overpopulation only if it has 5 or more alive neighbours 
+	
+};*/
+
+
+int main()
+{
+	int selection = 0;
+	int confluence = 0;
+	int c;
+	
+	Board board(20,75,0);
+	string trash;
+	system("cls");
+	cout << "Welcome to the cell simulator\n" << endl;
+	cout << "Select your cell type: (1) normal cells or (2) cancer cells" << endl;
+	while (selection<1 || selection>2)
+	{
+		cout << ">" << endl;
+		cin >> selection;
+	}
+	getline(cin, trash);
+	board.seed_cells(selection, confluence);
+	system("cls");
+	while (c!='q')
+	{
+		system("cls")
+		cout << "time:               " << board.get_time() << endl;
+		cout << "Number of cells:    " << board.get_num_cells() << endl;
+		board.display();
+		c = cin.get();
+		board.next_state():
+	}
+	
+	return 0;
+}
